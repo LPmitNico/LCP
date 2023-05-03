@@ -129,12 +129,12 @@ public class EventListener implements Listener {
 
 		if (members.contains(clickedPlayer.getUniqueId())) {
 			members.removePlayer(clickedPlayer.getUniqueId());
-			player.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(clickedPlayer.getName()  + " was removed from your Region"));
-			clickedPlayer.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(player.getName() + " has removed you from their Region"));
+			player.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(clickedPlayer.getName()  + " entfernt"));
+			clickedPlayer.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(player.getName() + " hat dich entfernt"));
 		} else {
 			members.addPlayer(clickedPlayer.getUniqueId());
-			player.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(clickedPlayer.getName()  + " was added to your Region"));
-			clickedPlayer.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(player.getName() + " has added you to their Region"));
+			player.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(clickedPlayer.getName()  + " hinzugefügt"));
+			clickedPlayer.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(player.getName() + " hat dich hinzugefügt"));
 		}
 
 		region.setMembers(members);
